@@ -1,1 +1,1 @@
-3rd odin project assignment / project. Going to implement rock paper scissors in javascript.
+3rd odin project assignment / project. Implements rock paper scissors in javascript.
