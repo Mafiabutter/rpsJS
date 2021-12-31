@@ -1,2 +1,1 @@
-# rpsJS
-3rd Odin project project. Rock paper scissors.
+3rd odin project assignment / project. Going to implement rock paper scissors in javascript.
