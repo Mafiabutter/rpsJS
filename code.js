@@ -1,8 +1,26 @@
 const buttons = document.querySelectorAll('button')
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        document.getElementById('#score').textContent = document.getElementById('#score').textContent + playRound(button.id, computerPlay())
-        //  Not sure if this will work ATM
+        if (document.getElementById('score').innerText == 5) {
+            alert('Player victory!')
+        }
+        else if (document.getElementById('computerScore').innerText == 5) {
+            alert('Computer victory..')
+        }
+        else {
+            let result = playRound(button.id, computerPlay())
+            if (result === 1) {
+                document.getElementById('score').innerText = parseInt(document.getElementById('score').innerText) + 1
+                if (document.getElementById('score').innerText == 5) {
+                    alert('Player victory!')
+                }
+            } else {
+                document.getElementById('computerScore').innerText = parseInt(document.getElementById('computerScore').innerText) + 1
+                if (document.getElementById('computerScore').innerText == 5) {
+                    alert('Computer victory..')
+                }
+            }
+        }
     })
 })
 
@@ -23,6 +41,7 @@ function computerPlay () {
             break;
     }
 }
+
 function playRound (playerSelection, computerSelection) {
     switch (playerSelection) {
         case 'rock':
